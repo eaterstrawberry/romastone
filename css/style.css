@@ -1,0 +1,272 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------*/
+body {
+  font-family: "TT Fors Trial";
+  font-size: 18px;
+  color: #212529;
+  font-weight: 400;
+  line-height: 133.333%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/*=======================*/
+.page {
+  flex: 1 1 auto;
+}
+
+/*=======================*/
+.project {
+  height: 100vh;
+  display: grid;
+  row-gap: 85px;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 208px;
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    height: 100%;
+    gap: 0;
+  }
+}
+
+.project-header {
+  margin-top: 26px;
+  margin-left: 32px;
+  grid-column: 1/2;
+}
+@media (max-width: 992px) {
+  .project-header {
+    margin: 20px 40px 45px 40px;
+  }
+}
+@media (max-width: 425px) {
+  .project-header {
+    margin: 20px 20px 20px 20px;
+    order: -1;
+  }
+}
+.project-header__sub-title {
+  font-weight: 600;
+  line-height: 214%;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .project-header__sub-title {
+    font-size: 11px;
+  }
+}
+.project-header__title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -1.28px;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .project-header__title {
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.96px;
+  }
+}
+.project-header__text {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .project-header__text {
+    font-size: 14px;
+    line-height: 128%;
+    letter-spacing: -0.28px;
+  }
+}
+
+.project-main {
+  margin-left: 32px;
+  grid-column: 1/2;
+  grid-row: 2/2;
+}
+@media (max-width: 992px) {
+  .project-main {
+    margin: 0px 40px 0px 40px;
+  }
+}
+@media (max-width: 425px) {
+  .project-main {
+    margin: 20px 20px 45px 20px;
+    order: 4;
+  }
+}
+.project-main__text {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .project-main__text {
+    font-size: 14px;
+    line-height: 128%;
+    letter-spacing: -0.28px;
+  }
+}
+.project-main__text span {
+  font-weight: 700;
+}
+.project-main img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.project-main__btn {
+  margin-top: 35px;
+  margin-bottom: 30px;
+  padding: 22px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 5px;
+  background-color: #F0165E;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 128%;
+  height: 48px;
+  width: 400px;
+  transition: all 0.5s ease;
+}
+.project-main__btn:hover {
+  background-color: #d01352;
+}
+@media (max-width: 500px) {
+  .project-main__btn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 112%;
+    letter-spacing: -0.64px;
+    width: 100%;
+  }
+}
+
+.project-content {
+  margin: 35px 40px 0px 0px;
+  grid-column: 2/3;
+  grid-row: 1/3;
+  overflow: scroll;
+  padding-bottom: 30px;
+}
+@media (max-width: 992px) {
+  .project-content {
+    margin: 5px 40px 45px 40px;
+  }
+}
+@media (max-width: 425px) {
+  .project-content {
+    margin: 20px 20px 30px 20px;
+    order: 2;
+  }
+}
+.project-content img {
+  width: 100%;
+  height: auto;
+}
+.project-content p {
+  padding-bottom: 60px;
+}
+@media (max-width: 992px) {
+  .project-content p {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .project-content p {
+    font-size: 14px;
+    line-height: 128%;
+    letter-spacing: -0.28px;
+  }
+}
+.project-content img:nth-child(3) {
+  padding-bottom: 60px;
+}
+@media (max-width: 992px) {
+  .project-content img:nth-child(3) {
+    padding-bottom: 20px;
+  }
+}
